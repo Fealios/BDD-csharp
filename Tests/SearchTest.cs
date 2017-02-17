@@ -32,5 +32,12 @@ namespace BDD.Objects
             Search testSearch = new Search("word", "other");
             Assert.Equal(false, testSearch.DoesItMatch("word", "other"));
         }
+
+        [Fact]
+        public void SentenceChecker_WordInSentence_true()
+        {
+            Search testSearch = new Search("hello my name is melvin", "melvin");
+            Assert.Equal(true, testSearch.SentenceChecker());
+        }
     }
 }
