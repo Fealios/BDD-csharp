@@ -2,4 +2,11 @@
   Layout="Shared/_Layout.cshtml";
 }
 
-@Model.GetSearchedString()
+@if(@Model.GetCounterCount() != 0)
+{
+    <h2> You had @Model.GetCounterCount() match(es) </h2>
+}
+else
+{
+    <h2> You had no matches </h2>
+}

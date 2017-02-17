@@ -12,6 +12,7 @@ namespace BDD.Objects
         {
             _toBeSearched = searchItem;
             _searchTerm = searchTerm;
+            SentenceChecker();
         }
 
         public string GetSearchedString()
@@ -40,13 +41,17 @@ namespace BDD.Objects
         public bool SentenceChecker()
         {
             string[] wordArray = _toBeSearched.Split(null);
-            Console.WriteLine(wordArray.Length);
+            // Console.WriteLine(wordArray.Length);
             if(wordArray.Length >= 2)
             {
                 for(int i = 0; i<wordArray.Length; i++)
                 {
                     DoesItMatch(wordArray[i], _searchTerm);
                 }
+            }
+            else
+            {
+                DoesItMatch(_toBeSearched, _searchTerm);
             }
 
             if(_matchCounter != 0)

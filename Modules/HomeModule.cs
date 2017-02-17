@@ -15,7 +15,7 @@ namespace BDD
 
             Post["/newsearch"] = _ =>
             {
-                Search newSearch = new Search(Request.Form["tobesearched"],Request.Form["searchitem"]);
+                Search newSearch = new Search(Request.Form["tobesearched"],Request.Form["searchterm"]);
                 return View["search-page.cshtml", newSearch];
             };
         }
