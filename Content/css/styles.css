@@ -1,8 +1,25 @@
-.form-holder{
+div{
     /*border: solid;*/
     width: 50%;
+    margin: 40px;
 }
 
-#new-search-button{
+body{
+    background-color: #ccf2ff;
+}
 
+label{
+    font-size: 14px;
+}
+
+#term{
+    color: #ff4d4d;
+}
+
+#search{
+    color: #3377ff;
+}
+
+blockquote{
+    font-size: 18px;
 }

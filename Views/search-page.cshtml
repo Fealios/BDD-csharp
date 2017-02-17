@@ -2,11 +2,19 @@
   Layout="Shared/_Layout.cshtml";
 }
 
-@if(@Model.GetCounterCount() != 0)
-{
-    <h2> You had @Model.GetCounterCount() match(es) </h2>
-}
-else
-{
-    <h2> You had no matches </h2>
-}
+<div>
+    @if(@Model.GetCounterCount() != 0)
+    {
+        <h2> You had @Model.GetCounterCount() match(es) </h2>
+        <blockquote>
+            <span id="term"> "@Model.GetSearchTerm()" </span> appeared in <span id="search"> "@Model.GetSearchedString()" </span> @Model.GetCounterCount() time(s).
+        </blockquote>
+    }
+    else
+    {
+        <h2> You had no matches </h2>
+    }
+
+    <a class="btn-floating btn-large" href="/"><</a>
+
+</div>
