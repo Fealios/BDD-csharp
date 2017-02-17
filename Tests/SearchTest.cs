@@ -46,11 +46,11 @@ namespace BDD.Objects
             Search testSearch = new Search("word this this this word", "this");
             Assert.Equal(3, testSearch.GetCounterCount());
         }
-        
+
         [Fact]
         public void SentenceChecker_MultipleWordMatch_False()
         {
-            Search newSearch = new Search("hello my friend", "enemy");
+            Search testSearch = new Search("hello my friend", "enemy");
             // testSearch.SentenceChecker();
             Assert.Equal(false, testSearch.SentenceChecker());
         }
