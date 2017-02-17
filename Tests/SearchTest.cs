@@ -13,6 +13,13 @@ namespace BDD.Objects
         }
 
         [Fact]
+        public void GetSearchedTerm_ReturnsSameString_true()
+        {
+            Search testSearch = new Search("word", "more");
+            Assert.Equal("more", testSearch.GetSearchTerm());
+        }
+
+        [Fact]
         public void DoesItMatch_TwoMatchingStrings_true()
         {
             Search testSearch = new Search("word", "word");

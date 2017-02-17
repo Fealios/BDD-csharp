@@ -18,6 +18,11 @@ namespace BDD.Objects
             return _toBeSearched;
         }
 
+        public string GetSearchTerm()
+        {
+            return _searchTerm;
+        }
+
         public bool DoesItMatch(string toBeSearched, string searchTerm)
         {
             if(toBeSearched == searchTerm)
