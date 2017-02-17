@@ -12,6 +12,12 @@ namespace BDD
             {
                 return View["index.cshtml"];
             };
+
+            Post["/newsearch"] = _ =>
+            {
+                Search newSearch = new Search(Request.Form["tobesearched"],Request.Form["searchitem"]);
+                return View["search-page.cshtml", newSearch];
+            };
         }
     }
 }

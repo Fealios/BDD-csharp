@@ -12,6 +12,11 @@ namespace BDD.Objects
             _toBeSearched = searchItem;
             _searchTerm = searchTerm;
         }
-        
+
+        public string GetSearchedString()
+        {
+            return _toBeSearched;
+        }
+
     }
 }
