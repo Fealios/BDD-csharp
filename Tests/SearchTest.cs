@@ -5,40 +5,40 @@ namespace BDD.Objects
 {
     public class SearchTest
     {
-        // [Fact]
-        // public void GetSearchedString_ReturnsSameString_true()
-        // {
-        //     Search testSearch = new Search("word", "more");
-        //     Assert.Equal("word", testSearch.GetSearchedString());
-        // }
-        //
-        // [Fact]
-        // public void GetSearchedTerm_ReturnsSameString_true()
-        // {
-        //     Search testSearch = new Search("word", "more");
-        //     Assert.Equal("more", testSearch.GetSearchTerm());
-        // }
-        //
-        // [Fact]
-        // public void DoesItMatch_TwoMatchingStrings_true()
-        // {
-        //     Search testSearch = new Search("word", "word");
-        //     Assert.Equal(true, testSearch.DoesItMatch("word", "word"));
-        // }
-        //
-        // [Fact]
-        // public void DoesItMatch_TwoNonMatchingStrings_false()
-        // {
-        //     Search testSearch = new Search("word", "other");
-        //     Assert.Equal(false, testSearch.DoesItMatch("word", "other"));
-        // }
-        //
-        // [Fact]
-        // public void SentenceChecker_WordInSentence_true()
-        // {
-        //     Search testSearch = new Search("hello my name is melvin", "melvin");
-        //     Assert.Equal(true, testSearch.SentenceChecker());
-        // }
+        [Fact]
+        public void GetSearchedString_ReturnsSameString_true()
+        {
+            Search testSearch = new Search("word", "more");
+            Assert.Equal("word", testSearch.GetSearchedString());
+        }
+
+        [Fact]
+        public void GetSearchedTerm_ReturnsSameString_true()
+        {
+            Search testSearch = new Search("word", "more");
+            Assert.Equal("more", testSearch.GetSearchTerm());
+        }
+
+        [Fact]
+        public void DoesItMatch_TwoMatchingStrings_true()
+        {
+            Search testSearch = new Search("word", "word");
+            Assert.Equal(true, testSearch.DoesItMatch("word", "word"));
+        }
+
+        [Fact]
+        public void DoesItMatch_TwoNonMatchingStrings_false()
+        {
+            Search testSearch = new Search("word", "other");
+            Assert.Equal(false, testSearch.DoesItMatch("word", "other"));
+        }
+
+        [Fact]
+        public void SentenceChecker_WordInSentence_true()
+        {
+            Search testSearch = new Search("hello my name is melvin", "melvin");
+            Assert.Equal(true, testSearch.SentenceChecker());
+        }
 
         [Fact]
         public void SentenceChecker_MultipleWordMatch_3()

@@ -40,19 +40,12 @@ namespace BDD.Objects
         public bool SentenceChecker()
         {
             string[] wordArray = _toBeSearched.Split(null);
-
+            Console.WriteLine(wordArray.Length);
             if(wordArray.Length >= 2)
             {
                 for(int i = 0; i<wordArray.Length; i++)
                 {
-                    if(DoesItMatch(wordArray[i], _searchTerm))
-                    {
-                        _matchCounter++;
-                    }
-                    else
-                    {
-                        continue;
-                    }
+                    DoesItMatch(wordArray[i], _searchTerm);
                 }
             }
 
