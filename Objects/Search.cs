@@ -18,5 +18,16 @@ namespace BDD.Objects
             return _toBeSearched;
         }
 
+        public bool DoesItMatch(string toBeSearched, string searchTerm)
+        {
+            if(toBeSearched == searchTerm)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
