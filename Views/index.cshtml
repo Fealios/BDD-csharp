@@ -1,3 +1,15 @@
 @{
   Layout="Shared/_Layout.cshtml";
 }
+
+<div class="form-holder">
+    <form action="/newsearch" method="post">
+        <label>Enter your word/phrase to be searched:</label>
+        <input type="text" name="tobesearched">
+        <br>
+        <label>Enter your search term:</label>
+        <input type="text" name="searchterm">
+        <br>
+        <button id="new-search-button" class="btn-floating btn-large" type="submit">Go</button>
+    </form>
+</div>
