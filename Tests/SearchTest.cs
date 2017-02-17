@@ -17,7 +17,13 @@ namespace BDD.Objects
         {
             Search testSearch = new Search("word", "word");
             Assert.Equal(true, testSearch.DoesItMatch("word", "word"));
+        }
 
+        [Fact]
+        public void DoesItMatch_TwoNonMatchingStrings_false()
+        {
+            Search testSearch = new Search("word", "other");
+            Assert.Equal(false, testSearch.DoesItMatch("word", "other"));
         }
     }
 }
